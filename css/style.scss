@@ -1,0 +1,181 @@
+$red: #9e2a2f;
+$orange: #be531c;
+$yellow1: #cf7f00;
+$yellow2: #daaa00;
+$green1: #abad23;
+$green2: #658d1b;
+$green3: #279989;
+$green4: #007681;
+$blue: #005f86;
+
+
+.bg-red { background-color: $red; }
+.border-red { border: 1px solid $red; }
+.text-red { color: $red; }
+
+.bg-orange { background-color: $orange; }
+.border-orange { border: 1px solid $orange; }
+.text-orange { color: $orange; }
+
+.bg-yellow1 { background-color: $yellow1; }
+.border-yellow1 { border: 1px solid $yellow1; }
+.text-yellow1 { color: $yellow1; }
+
+.bg-yellow2 { background-color: $yellow2; }
+.border-yellow2 { border: 1px solid $yellow2; }
+.text-yellow2 { color: $yellow2; }
+
+.bg-green1 { background-color: $green1; }
+.border-green1 { border: 1px solid $green1; }
+.text-green1 { color: $green1; }
+
+.bg-green2 { background-color: $green2; }
+.border-green2 { border: 1px solid $green2; }
+.text-green2 { color: $green2; }
+
+.bg-green3 { background-color: $green3; }
+.border-green3 { border: 1px solid $green3; }
+.text-green3 { color: $green3; }
+
+.bg-green4 { background-color: $green4; }
+.border-green4 { border: 1px solid $green4; }
+.text-green4 { color: $green4; }
+
+.bg-blue { background-color: $blue; }
+.border-blue { border: 1px solid $blue; }
+.text-blue { color: $blue; }
+
+
+
+html, body{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.title_bar{
+    height: 60px;
+}
+.flex{
+    color:#fff;
+    height: calc(100vh - 60px);
+    
+    display: flex;
+    flex-direction: column;
+    .top-row{
+        flex:3;
+    }
+    .bottom-row{
+        flex:1;
+    }
+    h2{
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: normal;
+    }
+}
+.flex-row
+{
+    
+    display:flex;
+    flex-direction: row;
+    align-self:stretch;
+    
+    flex:1;
+}
+
+.flex-column
+{
+    flex:1;
+    display:flex;
+    flex-direction: column;
+    align-self:stretch;
+}
+
+.flex-cell{
+    flex:1;
+   
+    margin: 5px;
+    display: flex;
+}
+
+
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    cursor: pointer;
+    /*border: 1px solid #f1f1f1;*/
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card.active .flip-card-inner {
+    transform: rotateY(-180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px 0 10px 0;
+    .content{
+        padding: 10px;
+        height: calc(100% - 20px);
+        display: flex;
+    }
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    /*background-color: #bbb;
+    color: black;*/
+    
+    
+  }
+  .width-full{
+      width: 100%;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    color:black;
+    transform: rotateY(180deg);
+  }
+
+  .clickable{
+      /*position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: blue;
+      cursor: pointer;*/
+  }
+
+  .text_input{
+      width: 100%;
+      border:0;
+      height: calc(100% - 100px);
+  }
+
+  @media print {
+    .flip-card-front
+    {
+        display: none;
+    }
+    .flip-card .flip-card-inner {
+        transform: rotateY(-180deg);
+      }
+ }

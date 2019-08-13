@@ -1,0 +1,278 @@
+.bg-red {
+  background-color: #9e2a2f;
+}
+
+.border-red {
+  border: 1px solid #9e2a2f;
+}
+
+.text-red {
+  color: #9e2a2f;
+}
+
+.bg-orange {
+  background-color: #be531c;
+}
+
+.border-orange {
+  border: 1px solid #be531c;
+}
+
+.text-orange {
+  color: #be531c;
+}
+
+.bg-yellow1 {
+  background-color: #cf7f00;
+}
+
+.border-yellow1 {
+  border: 1px solid #cf7f00;
+}
+
+.text-yellow1 {
+  color: #cf7f00;
+}
+
+.bg-yellow2 {
+  background-color: #daaa00;
+}
+
+.border-yellow2 {
+  border: 1px solid #daaa00;
+}
+
+.text-yellow2 {
+  color: #daaa00;
+}
+
+.bg-green1 {
+  background-color: #abad23;
+}
+
+.border-green1 {
+  border: 1px solid #abad23;
+}
+
+.text-green1 {
+  color: #abad23;
+}
+
+.bg-green2 {
+  background-color: #658d1b;
+}
+
+.border-green2 {
+  border: 1px solid #658d1b;
+}
+
+.text-green2 {
+  color: #658d1b;
+}
+
+.bg-green3 {
+  background-color: #279989;
+}
+
+.border-green3 {
+  border: 1px solid #279989;
+}
+
+.text-green3 {
+  color: #279989;
+}
+
+.bg-green4 {
+  background-color: #007681;
+}
+
+.border-green4 {
+  border: 1px solid #007681;
+}
+
+.text-green4 {
+  color: #007681;
+}
+
+.bg-blue {
+  background-color: #005f86;
+}
+
+.border-blue {
+  border: 1px solid #005f86;
+}
+
+.text-blue {
+  color: #005f86;
+}
+
+html, body {
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.title_bar {
+  height: 60px;
+}
+
+.flex {
+  color: #fff;
+  height: calc(100vh - 60px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.flex .top-row {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+
+.flex .bottom-row {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.flex h2 {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.flex-column {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+}
+
+.flex-cell {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  cursor: pointer;
+  /*border: 1px solid #f1f1f1;*/
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card.active .flip-card-inner {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border-radius: 10px 0 10px 0;
+}
+
+.flip-card-front .content, .flip-card-back .content {
+  padding: 10px;
+  height: calc(100% - 20px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  /*background-color: #bbb;
+    color: black;*/
+}
+
+.width-full {
+  width: 100%;
+}
+
+/* Style the back side */
+.flip-card-back {
+  color: black;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.clickable {
+  /*position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: blue;
+      cursor: pointer;*/
+}
+
+.text_input {
+  width: 100%;
+  border: 0;
+  height: calc(100% - 100px);
+}
+
+@media print {
+  .flip-card-front {
+    display: none;
+  }
+  .flip-card .flip-card-inner {
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */
