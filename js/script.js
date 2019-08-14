@@ -1,32 +1,40 @@
 $().ready(function () {
-// Listen for orientation changes
-window.addEventListener("orientationchange", function() {
-    // Announce the new orientation number
+    // Listen for orientation changes
+    window.addEventListener("orientationchange", function () {
+        // Announce the new orientation number
+        detectOrientation();
+    }, false);
     detectOrientation();
-  }, false);
-  detectOrientation();
-    function detectOrientation(){
+
+    function detectOrientation() {
         if (window.matchMedia("(orientation: portrait)").matches) {
-        // you're in PORTRAIT mode
-        $("#rotate_landscape").show()
-        $("#body").hide()
-     }
-     
-     if (window.matchMedia("(orientation: landscape)").matches) {
-        // you're in LANDSCAPE mode
-        $("#rotate_landscape").hide()
-        $("#body").show()
-        
-     }
+            // you're in PORTRAIT mode
+            $("#rotate_landscape").show()
+            $("#body").hide()
+        }
+
+        if (window.matchMedia("(orientation: landscape)").matches) {
+            // you're in LANDSCAPE mode
+            $("#rotate_landscape").hide()
+            $("#body").show()
+
+        }
     }
 
     $("#date").text(formatDate(new Date()));
     $(".flip-card").click(function (e) {
         if (e.target.type == "textarea")
             return;
-        $(this).toggleClass("active");
 
+        if (window.innerWidth < 720 && !$(this).hasClass("active")) {
+            //$(".flip-card").removeClass("active");
+            $(this).toggleClass("fullscreen");
+        } else {
+            $(".flip-card").removeClass("fullscreen");
+        }
+        $(this).toggleClass("active");
     })
+
 
     $(".mail").click(function (e) {
 
@@ -39,7 +47,7 @@ window.addEventListener("orientationchange", function() {
 
         $(".highlighter").removeClass("mail");
         $(".highlighter").addClass("print");
-        //window.print();
+        window.print();
 
     })
     $("#print_image").click(function () {
@@ -68,7 +76,7 @@ window.addEventListener("orientationchange", function() {
         var body = "";
         body += "Name:\r\n " + $("#name").val() + "\r\n";
         body += "Idea:\r\n " + $("#idea").val() + "\r\n";
-        body += "Date:\r\n " + formatDate(new Date())  + "\r\n\r\n";
+        body += "Date:\r\n " + formatDate(new Date()) + "\r\n\r\n";
 
         body += "Problem:\r\n" + $("#problem_txt").val() + "\r\n\r\n";
         body += "Existing Alternative:\r\n" + $("#existingAlternative_txt").val() + "\r\n\r\n";
@@ -82,7 +90,7 @@ window.addEventListener("orientationchange", function() {
         body += "Early Adopters:\r\n" + $("#earlyAdopters_txt").val() + "\r\n\r\n";
         body += "Cost Structure:\r\n" + $("#costStructure_text").val() + "\r\n\r\n";
         body += "Revenue Stream:\r\n" + $("#revenueStream_txt").val() + "\r\n\r\n";
-  
+
         var uri = "mailto:?subject=";
         uri += encodeURIComponent(subject);
         uri += "&body=";
