@@ -370,7 +370,9 @@ html, body {
 }
 
 
-
+#rotate_landscape{
+  display: none;
+}
 .float-right {
     float: right;
 }

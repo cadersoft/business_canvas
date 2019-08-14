@@ -1,17 +1,24 @@
 $().ready(function () {
-
-
-    if (window.matchMedia("(orientation: portrait)").matches) {
+// Listen for orientation changes
+window.addEventListener("orientationchange", function() {
+    // Announce the new orientation number
+    detectOrientation();
+  }, false);
+  detectOrientation();
+    function detectOrientation(){
+        if (window.matchMedia("(orientation: portrait)").matches) {
         // you're in PORTRAIT mode
-        $("#rotate_landscape").hide()
-        $("#body").show()
+        $("#rotate_landscape").show()
+        $("#body").hide()
      }
      
      if (window.matchMedia("(orientation: landscape)").matches) {
         // you're in LANDSCAPE mode
-        $("#rotate_landscape").show()
-        $("#body").hide()
+        $("#rotate_landscape").hide()
+        $("#body").show()
+        
      }
+    }
 
     $("#date").text(formatDate(new Date()));
     $(".flip-card").click(function (e) {
