@@ -12,10 +12,36 @@
 <body>
     <div id="body">
         <div class="title_bar">
-            Title and other form field goes here.
-            <button id="print_image">Print</button>
-            <a href="#" id="blank"></a>
+
+            <div class="float-right">
+                <div class="horizontal-panel">
+                    <div class="inputbox">
+                        <input type="text" id="name" placeholder="name">
+                    </div>
+
+
+                    <div class="inputbox">
+                        <input type="text" id="idea" placeholder="idea">
+                    </div>
+
+                    <div class="inputbox">
+                        <div id="date"></div>
+                    </div>
+                    <div class="buttons">
+                        <img src="images/ButtonGreyBG-01.svg">
+                        <img class="highlighter mail" src="images/circle.svg">
+                        <img class="print print_icon" src="images/print.svg">
+                        <img class="mail mail_icon" src="images/mail.svg">
+                    </div>
+                </div>
+            </div>
+            <div class="title">
+                L & D Innovation Model Canvas
+            </div>
+
         </div>
+
+
 
         <div class="flex">
             <div class="flex-row top-row">
@@ -30,13 +56,13 @@
                                         <div class="flex-column">
                                             <div class="flex-cell">
                                                 <div class="width-full">
-                                                    <img src="images/problem.svg" alt="" class="icon">
+                                                    <img src="images/Problem_Icon.svg" alt="" class="icon">
                                                     <h2>Problem</h2>
                                                 </div>
                                             </div>
                                             <div class="flex-cell">
                                                 <div class="width-full">
-                                                    <img src="images/problem.svg" alt="" class="icon">
+                                                    <!--                                                    <img src="images/problem.svg" alt="" class="icon">-->
                                                     <h2>Existing Alternatives</h2>
                                                 </div>
                                             </div>
@@ -50,14 +76,14 @@
                                             <div class="flex-cell">
                                                 <div class="width-full">
                                                     <h2 class="text-red">Problem</h2>
-                                                    <textarea class="text_input"
+                                                    <textarea class="text_input" id="problem_txt"
                                                         placeholder="type your response"></textarea>
                                                 </div>
                                             </div>
                                             <div class="flex-cell">
                                                 <div class="width-full">
                                                     <h2 class="text-red">Existing Alternatives</h2>
-                                                    <textarea class="text_input"
+                                                    <textarea id="existingAlternative_txt" class="text_input"
                                                         placeholder="type your response"></textarea>
                                                 </div>
                                             </div>
@@ -75,7 +101,7 @@
                                     <div class="flip-card-front bg-orange">
                                         <div class="content">
                                             <div class="width-full">
-                                                <img src="images/problem.svg" alt="" class="icon">
+                                                <img src="images/Solution_Icon-02.svg" alt="" class="icon">
                                                 <h2>Solution</h2>
                                             </div>
                                         </div>
@@ -84,7 +110,7 @@
                                         <div class="content">
                                             <div class="width-full">
                                                 <h2 class="text-orange">Solution</h2>
-                                                <textarea class="text_input"
+                                                <textarea id="solution_txt" class="text_input"
                                                     placeholder="type your response"></textarea>
                                             </div>
 
@@ -99,7 +125,7 @@
                                     <div class="flip-card-front bg-yellow1">
                                         <div class="content">
                                             <div class="width-full">
-                                                <img src="images/problem.svg" alt="" class="icon">
+                                                <img src="images/KeyMetrics_icon-02.svg" alt="" class="icon">
                                                 <h2>Key Metrics</h2>
                                             </div>
                                         </div>
@@ -108,7 +134,7 @@
                                         <div class="content">
                                             <div class="width-full">
                                                 <h2 class="text-yellow1">Key Metrics</h2>
-                                                <textarea class="text_input"
+                                                <textarea id="keyMetrics_txt" class="text_input"
                                                     placeholder="type your response"></textarea>
                                             </div>
 
@@ -121,18 +147,18 @@
                     <div class="flex-cell ">
                         <div class="flip-card ">
                             <div class="flip-card-inner">
-                                <div class="flip-card-front bg-yellow1">
+                                <div class="flip-card-front bg-yellow2">
                                     <div class="content">
                                         <div class="flex-column">
                                             <div class="flex-cell">
                                                 <div class="width-full">
-                                                    <img src="images/problem.svg" alt="" class="icon">
+                                                    <img src="images/UniqueValueProp_Icon-02.svg" alt="" class="icon">
                                                     <h2>Unique Value Proposition</h2>
                                                 </div>
                                             </div>
                                             <div class="flex-cell">
                                                 <div class="width-full">
-                                                    <img src="images/problem.svg" alt="" class="icon">
+                                                    <!--                                                    <img src="images/problem.svg" alt="" class="icon">-->
                                                     <h2>High-Level Concept</h2>
                                                 </div>
 
@@ -140,21 +166,21 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="flip-card-back border-yellow1">
+                                <div class="flip-card-back border-yellow2">
 
                                     <div class="content">
                                         <div class="flex-column">
                                             <div class="flex-cell">
                                                 <div class="width-full">
                                                     <h2 class="text-yellow1">Unique Value Proposition</h2>
-                                                    <textarea class="text_input"
+                                                    <textarea id="uvProposition_txt" class="text_input"
                                                         placeholder="type your response"></textarea>
                                                 </div>
                                             </div>
                                             <div class="flex-cell">
                                                 <div class="width-full">
                                                     <h2 class="text-yellow1">High-Level Concept</h2>
-                                                    <textarea class="text_input"
+                                                    <textarea id="hlConcept_txt" class="text_input"
                                                         placeholder="type your response"></textarea>
                                                 </div>
                                             </div>
@@ -172,16 +198,16 @@
                                         <div class="content">
 
                                             <div class="width-full">
-                                                <img src="images/problem.svg" alt="" class="icon">
-                                                <h2>Problem</h2>
+                                                <img src="images/CustomerRelation_Icon-02.svg" alt="" class="icon">
+                                                <h2>Customer Relation</h2>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="flip-card-back border-green1">
                                         <div class="content">
                                             <div class="width-full">
-                                                <h2 class="text-green1">Problem</h2>
-                                                <textarea class="text_input"
+                                                <h2 class="text-green1">Customer Relation</h2>
+                                                <textarea id="customer_relation" class="text_input"
                                                     placeholder="type your response"></textarea>
                                             </div>
 
@@ -197,16 +223,16 @@
                                         <div class="content">
 
                                             <div class="width-full">
-                                                <img src="images/problem.svg" alt="" class="icon">
-                                                <h2>Problem</h2>
+                                                <img src="images/Channels_Icon-02.svg" alt="" class="icon">
+                                                <h2>Channels</h2>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="flip-card-back border-green2">
                                         <div class="content">
                                             <div class="width-full">
-                                                <h2 class="text-green2">Problem</h2>
-                                                <textarea class="text_input"
+                                                <h2 class="text-green2">Channels</h2>
+                                                <textarea id="channels_txt" class="text_input"
                                                     placeholder="type your response"></textarea>
                                             </div>
 
@@ -224,14 +250,14 @@
                                         <div class="flex-column">
                                             <div class="flex-cell">
                                                 <div class="width-full">
-                                                    <img src="images/problem.svg" alt="" class="icon">
-                                                    <h2>Problem</h2>
+                                                    <img src="images/CustomerSegment_Icon-02.svg" alt="" class="icon">
+                                                    <h2>Customer Segment</h2>
                                                 </div>
                                             </div>
                                             <div class="flex-cell">
                                                 <div class="width-full">
-                                                    <img src="images/problem.svg" alt="" class="icon">
-                                                    <h2>Existing Alternative</h2>
+                                                    <!--                                                    <img src="images/problem.svg" alt="" class="icon">-->
+                                                    <h2>Early Adopters</h2>
                                                 </div>
                                             </div>
                                         </div>
@@ -243,15 +269,15 @@
                                         <div class="flex-column">
                                             <div class="flex-cell">
                                                 <div class="width-full">
-                                                    <h2 class="text-green3">Problem</h2>
-                                                    <textarea class="text_input"
+                                                    <h2 class="text-green3">Customer Segment</h2>
+                                                    <textarea id="customerSegments_txt" class="text_input"
                                                         placeholder="type your response"></textarea>
                                                 </div>
                                             </div>
                                             <div class="flex-cell">
                                                 <div class="width-full">
-                                                    <h2 class="text-green3">Existing Alternatives</h2>
-                                                    <textarea class="text_input"
+                                                    <h2 class="text-green3">Early Adopters</h2>
+                                                    <textarea id="earlyAdopters_txt" class="text_input"
                                                         placeholder="type your response"></textarea>
                                                 </div>
                                             </div>
@@ -274,16 +300,17 @@
                             <div class="flip-card-front bg-green4">
                                 <div class="content">
                                     <div class="width-full">
-                                        <img src="images/problem.svg" alt="" class="icon">
-                                        <h2>Problem</h2>
+                                        <img src="images/CostStructure_Icon-02.svg" alt="" class="icon">
+                                        <h2>Cost Structure</h2>
                                     </div>
                                 </div>
                             </div>
                             <div class="flip-card-back border-green4">
                                 <div class="content">
                                     <div class="width-full">
-                                        <h2 class="text-green4">Problem</h2>
-                                        <textarea class="text_input" placeholder="type your response"></textarea>
+                                        <h2 class="text-green4">Cost Structure</h2>
+                                        <textarea id="costStructure_text" class="text_input"
+                                            placeholder="type your response"></textarea>
                                     </div>
 
                                 </div>
@@ -298,17 +325,18 @@
                         <div class="flip-card-inner">
                             <div class="flip-card-front bg-blue">
                                 <div class="content">
-                                        <div class="width-full">
-                                    <img src="images/problem.svg" alt="" class="icon">
-                                    <h2>Problem</h2>
+                                    <div class="width-full">
+                                        <img src="images/RevenueStream_Icon-02.svg" alt="" class="icon">
+                                        <h2>Revenue Stream</h2>
                                     </div>
                                 </div>
                             </div>
                             <div class="flip-card-back border-blue">
                                 <div class="content">
                                     <div class="width-full">
-                                        <h2 class="text-blue">Problem</h2>
-                                        <textarea class="text_input" placeholder="type your response"></textarea>
+                                        <h2 class="text-blue">Revenue Stream</h2>
+                                        <textarea id="revenueStream_txt" class="text_input"
+                                            placeholder="type your response"></textarea>
                                     </div>
 
                                 </div>
