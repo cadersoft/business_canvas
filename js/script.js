@@ -40,14 +40,14 @@ $().ready(function () {
 
         $(".highlighter").addClass("mail");
         $(".highlighter").removeClass("print");
-        SendLinkByMail();
+        //SendLinkByMail();
     })
 
     $(".print").click(function (e) {
 
         $(".highlighter").removeClass("mail");
         $(".highlighter").addClass("print");
-        window.print();
+        //window.print();
 
     })
     $("#print_image").click(function () {
