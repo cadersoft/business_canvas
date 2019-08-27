@@ -19,8 +19,9 @@ var isMobile = {
     }
 };
 $().ready(function () {
+    $("#name").val(window.innerWidth);
     if( isMobile.any() ) {
-        $("#name").val(window.innerWidth);
+      
         //detectOrientation();
         if(window.innerHeight > window.innerWidth){
             $("#rotate_landscape").css("display", "flex")
