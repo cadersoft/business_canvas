@@ -1,4 +1,38 @@
+var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
 $().ready(function () {
+    if( isMobile.any() ) {
+        alert(window.innerWidth);
+        //detectOrientation();
+        if(window.innerHeight > window.innerWidth){
+            $("#rotate_landscape").css("display", "flex")
+            $("#body").hide()
+        }
+        else
+        {
+            $("#rotate_landscape").css("display", "none")
+            $("#body").show()
+        }
+    }
+
     // Listen for orientation changes
     window.addEventListener("orientationchange", function () {
         // Announce the new orientation number
@@ -12,12 +46,9 @@ $().ready(function () {
             // you're in PORTRAIT mode
             $("#rotate_landscape").css("display", "none")
             $("#body").show()
-        }
-
-        if (window.matchMedia("(orientation: landscape)").matches) {
+        }else
+        {
             // you're in LANDSCAPE mode
-            
-
             $("#rotate_landscape").css("display", "flex")
             $("#body").hide()
 

@@ -2,7 +2,11 @@
   width: 30px;
   height: 30px;
 }
-
+.icon_right{
+  float: left;
+  margin-right: 10px;
+  margin-top: 5px; 
+}
 .bg-red {
   background-color: #9e2a2f;
 
