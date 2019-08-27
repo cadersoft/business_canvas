@@ -19,9 +19,9 @@ var isMobile = {
     }
 };
 $().ready(function () {
-    $("#name").val(window.innerWidth);
+    //$("#name").val(window.innerWidth);
     if( isMobile.any() ) {
-      
+        console.log("Mobile")
         //detectOrientation();
         if(window.innerHeight > window.innerWidth){
             $("#rotate_landscape").css("display", "flex")
@@ -61,7 +61,7 @@ $().ready(function () {
         if (e.target.type == "textarea")
             return;
 
-        if (window.innerWidth < 720 && !$(this).hasClass("active")) {
+        if ( (window.innerWidth < 720 && !$(this).hasClass("active") ) || isMobile.any()) {
             //$(".flip-card").removeClass("active");
             $(this).toggleClass("fullscreen");
         } else {
