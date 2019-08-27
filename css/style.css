@@ -389,6 +389,16 @@ body {
 
 #rotate_landscape {
   display: none;
+  background-color: #33333370;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+#rotate_landscape img {
+  align-self: center;
+  align-items: center;
 }
 
 .float-right {
@@ -413,6 +423,8 @@ body {
   margin-top: 3px;
 }
 
+
+
 .fullscreen {
   position: absolute;
   left: 0;
@@ -420,6 +432,11 @@ body {
   top: 0;
   bottom: 0;
   z-index: 2;
+}
+
+.count{
+  font-size: 11px;
+  color: #999;
 }
 
 @media print {

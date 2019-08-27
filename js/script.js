@@ -4,19 +4,22 @@ $().ready(function () {
         // Announce the new orientation number
         detectOrientation();
     }, false);
-    detectOrientation();
+    //detectOrientation();
 
     function detectOrientation() {
+        console.log(window.matchMedia("(orientation: portrait)"));
         if (window.matchMedia("(orientation: portrait)").matches) {
             // you're in PORTRAIT mode
-            $("#rotate_landscape").show()
-            $("#body").hide()
+            $("#rotate_landscape").css("display", "none")
+            $("#body").show()
         }
 
         if (window.matchMedia("(orientation: landscape)").matches) {
             // you're in LANDSCAPE mode
-            $("#rotate_landscape").hide()
-            $("#body").show()
+            
+
+            $("#rotate_landscape").css("display", "flex")
+            $("#body").hide()
 
         }
     }

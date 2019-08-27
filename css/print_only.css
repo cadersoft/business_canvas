@@ -1,0 +1,10 @@
+.button_bg, .mail{
+    display: none;
+}
+.buttons .highlighter.print {
+    left: 12px;
+}
+
+.buttons {
+    width: 50px;
+}
